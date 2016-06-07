@@ -69,7 +69,8 @@
                                (.getSecurityContext)
                                (.getAuthenticatedAccount)
                                (.getPrincipal)
-                               (.getName)))}))
+                               (.getName)))})
+  (route/not-found "Not found"))
 
 (defn -main []
   (web/run (wrap-security app) server-opts))
