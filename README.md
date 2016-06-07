@@ -1,14 +1,11 @@
 # immutant-keycloak
 
-A Clojure library designed to ... well, that part is up to you.
+Example Ring web app served with [Immutant](http://immutant.org/) and secured with [Keycloak](http://keycloak.jboss.org/)
 
 ## Usage
 
-FIXME
+You'll need a `keycloak.json` with your client configuration under `resources/` folder
 
 ## License
 
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Apache License 2.0
