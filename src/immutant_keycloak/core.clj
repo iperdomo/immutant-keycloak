@@ -62,14 +62,28 @@
   (GET "/" []
     {:headers {"content-type" "text/html"}
      :body "<html>Hello, go to <a href=\"/admin\">/admin</a></html>"})
+
   (GET "/admin" req
-      {:status 200
-       :body (str "Hello " (-> req
-                               :server-exchange
-                               (.getSecurityContext)
-                               (.getAuthenticatedAccount)
-                               (.getPrincipal)
-                               (.getName)))})
+    {:status 200
+     :headers {"content-type" "text/html"}
+     :body (str "Hello "
+                (-> req
+                    :server-exchange
+                    (.getSecurityContext)
+                    (.getAuthenticatedAccount)
+                    (.getPrincipal)
+                    (.getName))
+                " <a href=\"/logout\">logout</a>")})
+
+  (GET "/logout" req
+    (do
+      (-> req
+          :server-exchange
+          (.getSecurityContext)
+          (.logout))
+      {:status 302
+       :headers {"Location" "/"}}))
+
   (route/not-found "Not found"))
 
 (defn -main []
