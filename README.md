@@ -7,6 +7,8 @@ Example Ring web app served with [Immutant](http://immutant.org/) and secured wi
 
 * You'll need a `keycloak.json` with your client configuration under `resources/` folder
 * The example code expects that the client is configured to `localhost:3030`
+* `lein run` should be to start a web server
+
 
 ## Technical details
 
