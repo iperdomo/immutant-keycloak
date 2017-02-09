@@ -6,6 +6,6 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.immutant/web "2.1.4"]
                  [io.undertow/undertow-core "1.3.15.Final"]
-                 [org.keycloak/keycloak-undertow-adapter "1.9.7.Final"]
+                 [org.keycloak/keycloak-undertow-adapter "2.5.1.Final"]
                  [compojure "1.5.0"]]
   :main immutant-keycloak.core)

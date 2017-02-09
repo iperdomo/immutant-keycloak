@@ -13,7 +13,7 @@ Example Ring web app served with [Immutant](http://immutant.org/) and secured wi
 ## Technical details
 
 The authentication is based on Keycloak's
-[Undertow Adapter](https://github.com/keycloak/keycloak/tree/1.9.x/adapters/oidc/undertow)
+[Undertow Adapter](https://github.com/keycloak/keycloak/tree/2.5.x/adapters/oidc/undertow)
 
 ## License
 
